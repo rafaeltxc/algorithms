@@ -4,13 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QuickSort {
+	
+	private List<Integer> mergeLists(List<Integer> arr1, int pivot, List<Integer> arr2) {
+		ArrayList<Integer> list = new ArrayList<>();
+
+		list.addAll(quickSort(arr1));
+		list.add(pivot);
+		list.addAll(quickSort(arr2));
+		
+		return list;
+	}
 
 	public List<Integer> quickSort(List<Integer> arr) {
-		if(arr.size() <= 1) {
-			return arr;
-		}
+		if(arr.size() <= 1) { return arr; }
 		
-		ArrayList<Integer> list = new ArrayList<>();
 		int pivot = arr.get(0);
 		ArrayList<Integer> left = new ArrayList<>();
 		ArrayList<Integer> right = new ArrayList<>();
@@ -22,12 +29,8 @@ public class QuickSort {
 				right.add(arr.get(i));
 			}
 		}
-		
-		list.addAll(quickSort(left));
-		list.add(pivot);
-		list.addAll(quickSort(right));
-		
-		return list;
+
+		return mergeLists(left, pivot, right);
 	}
 	
 }
