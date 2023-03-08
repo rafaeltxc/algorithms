@@ -1,4 +1,4 @@
 # SortAlgorithms
 (On going)
 
-Different types of sort algorithms in Java
+Different types of algorithms in Java
