@@ -16,7 +16,7 @@ public class BogoSort {
 	}
 	
 	public List<Integer> bogoSort(List<Integer> arr) {
-		if(arr.size() <= 1) { return arr; }
+		if(arr.size() <= 1 || isOrdered(arr)) { return arr; }
 		
 		while(true) {
 			Collections.shuffle(arr);

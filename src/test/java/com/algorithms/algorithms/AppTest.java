@@ -8,7 +8,9 @@ import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import sortAlgorithms.BogoSort;
 import sortAlgorithms.BubbleSort;
+import sortAlgorithms.CombSort;
 import sortAlgorithms.GnomeSort;
 import sortAlgorithms.HeapSort;
 import sortAlgorithms.InsertionSort;
@@ -81,5 +83,17 @@ public class AppTest
     public void gnomeSort() {
     	GnomeSort sort = new GnomeSort();
     	Assert.assertEquals(sort.gnomeSort(unsortedArrayList), sortedArrayList);
+    }
+    
+    @Test
+    public void bogoSort() {
+    	BogoSort sort = new BogoSort();
+    	Assert.assertEquals(sort.bogoSort(unsortedArrayList), sortedArrayList);
+    }
+    
+    @Test
+    public void combSort() {
+    	CombSort sort = new CombSort();
+    	Assert.assertEquals(sort.combSort(unsortedArrayList), sortedArrayList);
     }
 }
