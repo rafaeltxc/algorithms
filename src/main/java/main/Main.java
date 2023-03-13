@@ -15,6 +15,7 @@ import sortAlgorithms.QuickSort;
 import sortAlgorithms.SelectionSort;
 import sortAlgorithms.ShakerSort;
 import sortAlgorithms.ShellSort;
+import sortAlgorithms.StrandSort;
 
 public class Main {
 
@@ -34,7 +35,8 @@ public class Main {
 		GnomeSort gnomeSort = new GnomeSort();
 		CombSort combSort = new CombSort();
 		BogoSort bogoSort = new BogoSort();
-		System.out.println(combSort.combSort(arrayList));
+		StrandSort strandSort = new StrandSort(); 
+		System.out.println(strandSort.strandSort(arrayList));
 	}
 	
 }
