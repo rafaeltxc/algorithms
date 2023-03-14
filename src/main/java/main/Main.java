@@ -11,6 +11,7 @@ import sortAlgorithms.GnomeSort;
 import sortAlgorithms.HeapSort;
 import sortAlgorithms.InsertionSort;
 import sortAlgorithms.MergeSort;
+import sortAlgorithms.OddEvenSort;
 import sortAlgorithms.QuickSort;
 import sortAlgorithms.SelectionSort;
 import sortAlgorithms.ShakerSort;
@@ -35,8 +36,9 @@ public class Main {
 		GnomeSort gnomeSort = new GnomeSort();
 		CombSort combSort = new CombSort();
 		BogoSort bogoSort = new BogoSort();
-		StrandSort strandSort = new StrandSort(); 
-		System.out.println(strandSort.strandSort(arrayList));
+		StrandSort strandSort = new StrandSort();
+		OddEvenSort oddEvenSort = new OddEvenSort();
+		System.out.println(oddEvenSort.oddEvenSort(arrayList));
 	}
 	
 }

@@ -15,10 +15,12 @@ import sortAlgorithms.GnomeSort;
 import sortAlgorithms.HeapSort;
 import sortAlgorithms.InsertionSort;
 import sortAlgorithms.MergeSort;
+import sortAlgorithms.OddEvenSort;
 import sortAlgorithms.QuickSort;
 import sortAlgorithms.SelectionSort;
 import sortAlgorithms.ShakerSort;
 import sortAlgorithms.ShellSort;
+import sortAlgorithms.StrandSort;
 
 
 public class AppTest 
@@ -95,5 +97,17 @@ public class AppTest
     public void combSort() {
     	CombSort sort = new CombSort();
     	Assert.assertEquals(sort.combSort(unsortedArrayList), sortedArrayList);
+    }
+    
+    @Test
+    public void strandSort() {
+    	StrandSort sort = new StrandSort();
+    	Assert.assertEquals(sort.strandSort(unsortedArrayList), sortedArrayList);
+    }
+    
+    @Test
+    public void oddEvenSort() {
+    	OddEvenSort sort = new OddEvenSort();
+    	Assert.assertEquals(sort.oddEvenSort(unsortedArrayList), sortedArrayList);
     }
 }
